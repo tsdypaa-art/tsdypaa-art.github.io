@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>試合総括・スタメン | FC今治・最前線レポート</title>
+    <!-- ⬇️ 授業仕様：このサブページの内容に合わせた独自の要約とビューポートの設定を追加 -->
+    <meta name="description" content="FC今治の直近の試合結果やスタメン配置、監督の交代策の意図、ピッチ上での戦術的な駆け引きをサポーター独自の視点で深く分析・総括するページです。">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+
+<body class="sub-page">
+
+    <header>
+        <div class="logo-box">
+            <img src="image/FC-Imabari-Logo.png" width="400" height="319" alt="FC今治 公式エンブレムロゴ" class="logo-img">
+        </div>
+        <h1>FC今治・最前線レポート</h1>
+        <ul class="nav-list">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="contents1.html">戦術・歴史</a></li>
+            <li><a href="contents2.html">試合総括・スタメン</a></li>
+            <li><a href="contents3.html">スタジアムイベント</a></li>
+        </ul>
+    </header>
+
+    <ol class="breadcrumb">
+        <li><a href="index.html">トップ</a></li>
+        <li>試合総括・スタメン</li>
+    </ol>
+
+    <article class="main-article page" style="padding: 20px;">
+        <h1>今週の試合総括・スタメン</h1>
+        
+        <section>
+            <h2>直近の試合分析</h2>
+            <p>激戦が続くJ2リーグ。直近の試合におけるチームのスタメン配置、交代策の意図、そしてピッチ上で起きていた戦術的な駆け引きをサポーター独自の視点で深く分析します。次節の勝利に向けた改善点や、期待の新戦力データも随時更新していきます。</p>
+        </section>
+
+        <!-- ⬇️ 授業第12回仕様：テーブル（表）の追加 ⬇️ -->
+        <section>
+            <h2>直近のリーグ戦績と順位状況</h2>
+            <p>直近3試合の勝敗結果と、現在の暫定順位・勝ち点データです。</p>
+            
+            <table class="match-table">
+                <!-- 仕様：表のタイトル -->
+                <caption>【2026シーズン J2リーグ直近戦績】</caption>
+                <thead>
+                    <tr>
+                        <!-- 仕様：thは項目名（太字・中央揃え） -->
+                        <th>節</th>
+                        <th>対戦相手</th>
+                        <th>スコア</th>
+                        <th>勝敗</th>
+                        <th>現在の順位</th>
+                        <th>総勝ち点</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>第11節</td>
+                        <td>徳島ヴォルティス</td>
+                        <td>2 - 1</td>
+                        <td class="win-cell">◯ 勝ち</td>
+                        <!-- 仕様：rowspanで縦に3行分を1つに結合 -->
+                        <td rowspan="3" class="rank-cell">暫定 3位</td>
+                        <!-- 仕様：rowspanで縦に3行分を1つに結合 -->
+                        <td rowspan="3" class="pts-cell">28 pt</td>
+                    </tr>
+                    <tr>
+                        <td>第12節</td>
+                        <td>大分トリニータ</td>
+                        <td>1 - 1</td>
+                        <td class="draw-cell">△ 分分</td> <!-- 空白対策として&nbsp;の代わりに文字を記述、または実文字 -->
+                    </tr>
+                    <tr>
+                        <td>第13節</td>
+                        <td>ベガルタ仙台</td>
+                        <td>0 - 1</td>
+                        <td class="lose-cell">● 負け</td>
+                    </tr>
+                    <tr>
+                        <!-- 仕様：colspanで横に6列分をすべて1つに結合（注釈用） -->
+                        <td colspan="6" class="table-note">※順位および勝ち点は2026年7月2日時点のデータです。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- ⬆️ テーブル追加ここまで ⬆️ -->
+
+    </article>
+
+    <footer>
+        <p class="copyright-notice">※本サイトで使用しているFC今治のロゴ画像および意匠は、FC今治（株式会社今治．夢スポーツ）に帰属する著作物であり、教育研究目的のファンレポートとして引用しています。</p>
+        <!-- ⬇️ 授業仕様：バリゲーターの利用明示と正しい外部リンク（スペース区切りを修正） -->
+        <br><small>This site uses <a href="http://www.htmllint.net/html-lint/htmllint.html#" target="_blank">Another HTML-Lint5 Markup Validation Service</a> and <a href="http://jigsaw.w3.org/css-validator/#validate by upload" target="_blank">W3C CSS Markup Validation Service</a>.</small>
+        <br><small>&copy; 2026 FC Imabari Frontline Report. All Rights Reserved.</small>
+    </footer>
+</body>
+
+</html>

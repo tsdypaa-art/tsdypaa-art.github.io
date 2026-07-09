@@ -1,0 +1,396 @@
+@charset "utf-8";
+
+/* 全体の基本設定 */
+body {
+    font-family: "メイリオ", "Hiragino Sans", sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0 auto 50px auto;
+    max-width: 1000px;
+}
+
+p {
+    font-size: 95%;
+    line-height: 1.8;
+}
+
+/* ヘッダーの設定 */
+header {
+    text-align: center;
+    background-color: #000080; /* チームカラーのネイビー */
+    color: #ffffff;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 180%;
+    margin: 10px 0;
+}
+
+/* ロゴ画像の設定 */
+.logo-box {
+    text-align: center; 
+    padding: 15px 15px 0 15px;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto; 
+}
+
+/* ヘッダー内ナビゲーション */
+.nav-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ⑨ リンクの疑似クラス指定（必ず :link, :visited, :hover, :active の順に記述） */
+.nav-list li a:link {
+    color: #ffffff;
+    text-decoration: none; /* ⑨ 1) text-decoration の使用 */
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.nav-list li a:visited {
+    color: #ffffff;
+}
+
+.nav-list li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* ホバー時に分かりやすく色を変化 */
+}
+
+.nav-list li a:active {
+    color: #ff0000;
+}
+
+/* メインビジュアルエリア */
+.main-article {
+    position: relative;
+}
+
+.main-visual-container {
+    position: relative;
+    margin: 20px auto;
+    width: 800px; 
+}
+
+.main-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 写真の上の文字エリア */
+.catch {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.main-image-title {
+    color: #ffffff;
+    font-size: xx-large;
+    margin: 0;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+/* リード文 */
+.lead-text {
+    padding: 0 20px;
+}
+
+/* 見出しの装飾 */
+h2 {
+    font-size: 130%;
+    border-bottom: 1px dashed #000080;
+    border-left: 10px solid #000080;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+/* 本文エリア設定 */
+.navy {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    margin: 20px;
+}
+
+.red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* 最新のレポート・更新情報エリア */
+.info-section {
+    margin: 30px 20px;
+    padding: 20px;
+    border: 2px solid #000080;
+    background-color: #ffffff;
+    border-radius: 8px; 
+}
+
+.info-list {
+    list-style-type: none; 
+    line-height: 1.8; 
+    padding-left: 0;
+}
+
+.info-list li {
+    margin-bottom: 12px;
+    font-size: 95%;
+}
+
+.info-list time {
+    background-color: #000080; 
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 85%;
+    padding: 2px 8px;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* ④ 回り込み解除と右揃えのスタイル設定 */
+.sentou {
+    clear: both;
+    text-align: right;
+    font-size: 90%;
+    margin-top: 15px;
+}
+
+.sentou a:link, .sentou a:visited {
+    color: #000080;
+    text-decoration: underline;
+}
+
+.sentou a:hover {
+    color: #ff0000;
+}
+
+/* フッターの設定 */
+footer {
+    text-align: center;
+    background-color: #000080; 
+    color: #ffffff;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+/* フッター内リンクの疑似クラス */
+footer a:link, footer a:visited {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.copyright-notice {
+    font-size: 10px;
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+small {
+    font-size: 80%;
+}
+
+
+/* ==========================================
+   追加指定された項目のみの設定
+   ========================================== */
+
+/* ② contents1.html用の背景グラデーション設定（上から下へ） */
+body.sub-page {
+    background: linear-gradient(to bottom, #ffffff, #e6f0fa);
+}
+
+/* ③ contents1.html用のリスト行頭文字を画像にする設定 */
+.sub-mark-list {
+    list-style-image: url(../image/mark.gif);
+    padding-left: 25px;
+    line-height: 2.0;
+}
+
+/* ①①① クラス point-img: 画像の角を丸くし、右に配置して後に続く要素を左に回り込ませ、マージンを設定 */
+.point-img {
+    float: right;
+    border-radius: 8px; /* 角を丸くする */
+    margin-left: 10px;  /* 左マージン 10px */
+    margin-bottom: 10px;/* 下マージン 10px */
+    width: 300px;       /* 画面に収まるよう適切なサイズに調整 */
+    height: auto;
+}
+
+/* 回り込みの手動解除用補助クラス */
+.clear-fix {
+    clear: both;
+}
+
+/* ②② すべてのサブページでパンくずリスト: li要素に display: inline; を設定 */
+.breadcrumb {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+/* パンくずリストの区切り文字として「 > 」を表示 */
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: #6c757d;
+    content: ">";
+}
+
+.breadcrumb li a:link, .breadcrumb li a:visited {
+    color: #000080;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+/* Let's Try: クラス page の左右 padding を 10px に設定 */
+.page {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* ⑤⑤⑤ レレスポンシブWebデザイン: ウィンドウ幅が600px以下の時、回り込みを解除 */
+@media screen and (max-width: 600px) {
+    .point-img {
+        float: none;
+        display: block;
+        margin: 10px auto; /* 中央寄せ */
+    }
+}
+
+/* ==========================================================================
+    印刷用スタイルの設定（メディアクエリ）
+   ========================================================================== */
+@media print {
+    /* 印刷時に不要なナビゲーションメニューやフッターのバリゲーターを非表示にする */
+    header, 
+    .breadcrumb, 
+    .info-section, 
+    footer {
+        display: none !important;
+    }
+
+    /* 印刷時の背景を白、文字色を黒にして読みやすくし、画面幅の制限を解除する */
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        max-width: 100% !important;
+        font-size: 12pt;
+    }
+
+    /* メイン記事の余白を調整 */
+    .main-article, .page {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 印刷時に画像がはみ出さないように制御 */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 印刷時も回り込みを維持するか、見やすさ重視で解除する設定 */
+    .point-img {
+        float: none !important;
+        display: block !important;
+        margin: 10px auto !important;
+    }
+}
+
+/* ==========================================================================
+    テーブル（表）のスタイル設定
+   ========================================================================== */
+
+/* 表全体のベース設定 */
+table.match-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* 仕様：表やセルの隣り合う枠線を1本にまとめて表示 */
+    border-collapse: collapse; 
+    font-size: 95%;
+    background-color: #ffffff;
+}
+
+/* 仕様：表のタイトルの表示位置を「上」に設定 */
+table.match-table caption {
+    caption-side: top;
+    font-weight: bold;
+    color: #000080;
+    text-align: left;
+    padding-bottom: 8px;
+}
+
+/* 項目名（th）とデータセル（td）の共通枠線・余白設定 */
+table.match-table th, 
+table.match-table td {
+    border: 1px solid #cbd5e1; /* 枠線を表示 */
+    /* 仕様：枠線と内容との間隔（パディング）を設定 */
+    padding: 12px 10px; 
+    /* 仕様：セル内での縦方向の揃えを「中央」に指定 */
+    vertical-align: middle; 
+    text-align: center;
+}
+
+/* 項目名（th）の背景色を設定 */
+table.match-table th {
+    background-color: #000080; /* チームカラーのネイビー */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 行ごとの背景色の重ね順（trに薄いグレー、結合セルは白など微調整） */
+table.match-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* 縦結合（rowspan）したセルの強調スタイル */
+.rank-cell, .pts-cell {
+    background-color: #fffbeb !important; /* 薄い黄色で注目させる */
+    font-weight: bold;
+    color: #b45309;
+    font-size: 110%;
+}
+
+/* 勝敗セルごとの文字色装飾 */
+.win-cell { color: #dc2626; font-weight: bold; }  /* 勝ち：赤 */
+.draw-cell { color: #4b5563; }                    /* 引き分け：グレー */
+.lose-cell { color: #2563eb; }                    /* 負け：青 */
+
+/* 横結合（colspan）した注釈セルの左寄せスタイル */
+.table-note {
+    text-align: left !important;
+    font-size: 85%;
+    color: #64748b;
+    background-color: #f1f5f9;
+}
